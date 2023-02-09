@@ -10,7 +10,7 @@ from PIL import Image, ImageTk
 
 class InputHandler():
     # def __init__(self, angle_extractor, pose_estimator, mask, gui):
-    def __init__(self, gui):
+    def __init__(self, model, gui):
         self.cap = None
         self.writer = None
         self.is_stopped = True
@@ -19,10 +19,8 @@ class InputHandler():
         self.last_frame_view = None
 
         # Setup modules
-        # self.skeleton = Skeleton(pose_estimator.nof_joints)
-        # self.angle_extractor = angle_extractor
-        # self.pose_estimator = pose_estimator
-        # self.mask = mask
+        self.model = model
+        
         self.gui = gui
 
     def start_recording(self):

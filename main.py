@@ -16,8 +16,11 @@ if __name__ == '__main__':
     # Create GUI instance
     gui = GUI()
     
+    #Create a Model instance
+    model = [] # crie aqui uma instancia para o seu modelo. Se tiver mais de um, crie cada um com uma variavel diferente e altere o construtor do InputHandler para recebê-los
+    
     # Create CameraHandler instance
-    input_handler = InputHandler(gui)
+    input_handler = InputHandler(model,gui)
 
     # Set input handler into gui (start / stop / set new inputs)
     gui.set_input_handler(input_handler)

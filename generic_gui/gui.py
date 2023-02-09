@@ -21,7 +21,6 @@ class GUI(customtkinter.CTk):
         self.geometry(f"{GUI.WIDTH}x{GUI.HEIGHT}")
         self.minsize(GUI.WIDTH, GUI.HEIGHT)
         self.maxsize(GUI.WIDTH, GUI.HEIGHT)
-        #self.set_scaling(1, 1, 1)
         self.resizable(False, False)
         
         # configure grid layout (2x1)
